@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Buy Website</title>
+    <link rel="stylesheet" href="sl.css">
+    <style>
+        /* Add your existing CSS here or in sl.css */
+
+        /* Style for product images */
+        .product-image {
+            width: 100%; /* Make the image take the full width of the product card */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Rounded corners */
+            margin-top: 10px; /* Space between button and image */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+            transition: transform 0.3s ease, opacity 0.3s ease; /* Animation for transform and opacity */
+        }
+
+        /* Hover effect for the product image */
+        .product-image:hover {
+            transform: scale(1.05); /* Scale up the image slightly on hover */
+            opacity: 0.9; /* Slightly reduce opacity on hover */
+        }
+
+        /* Button styles */
+        .buyBtn {
+            color: white;
+            background-color: grey;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s; /* Animation for background color and scale */
+        }
+
+        /* Hover effect for the button */
+        .buyBtn:hover {
+            background-color: green; /* Change background color on hover */
+            transform: scale(1.1); /* Scale up the button */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Cheat Buy</h1>
+        <button id="loginBtn">Login</button>
+    </header>
+
+    <main>
+        <section class="products">
+            <h2>Available Scripts</h2>
+            <div class="product" data-tab="rust">
+                <h3>Rust Script</h3>
+                <p>Buy the best Rust scripts here!</p>
+                <button class="buyBtn" onclick="window.location.href='buy.html';">Buy Now</button>
+                <img src="https://i.ibb.co/85tjvmW/Sk-rmbild-2024-11-19-042927.png" alt="Rust Script" class="product-image">
+            </div>
+            <div class="product" data-tab="apex">
+                <h3>Apex Script</h3>
+                <p>Get your Apex scripts today!</p>
+                <button class="buyBtn">Buy Now</button>
+                <img src="path/to/apex-script-image.jpg" alt="Apex Script" class="product-image">
+            </div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
